@@ -157,6 +157,17 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-5 lg:grid-cols-[1fr_420px] lg:px-6">
           <div className="flex flex-col justify-between gap-4">
             <div>
+              <nav className="mb-5 flex flex-wrap gap-2 text-sm font-semibold text-slate-600" aria-label="Tool navigation">
+                <a className="rounded-md border border-line bg-white px-3 py-2 hover:bg-slate-100" href="https://wayan.com/ai-under-the-contract/">
+                  Home
+                </a>
+                <a className="rounded-md border border-line bg-white px-3 py-2 hover:bg-slate-100" href="https://wayan.com/ai-under-the-contract/about.html">
+                  About
+                </a>
+                <a className="rounded-md border border-ink bg-ink px-3 py-2 text-white hover:bg-slate-700" href="https://payer-contract-sim.onrender.com/">
+                  Simulator
+                </a>
+              </nav>
               <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-normal text-ink sm:text-4xl">
                 Your AI documentation copilot is not neutral.
               </h1>
@@ -346,7 +357,9 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
 
       <footer className="border-t border-line bg-white">
         <div className="mx-auto max-w-7xl px-4 py-6 text-sm leading-6 text-slate-600 lg:px-6">
-          Built by Wayan Vota at wayan.com. The dashboard you build is the dashboard you optimize. The dashboard you optimize is the company you become.
+          Built by Wayan Vota at <a className="font-semibold underline" href="https://wayan.com/">wayan.com</a>. Visit the{" "}
+          <a className="font-semibold underline" href="https://wayan.com/ai-under-the-contract/">home page</a> or{" "}
+          <a className="font-semibold underline" href="https://wayan.com/ai-under-the-contract/about.html">about page</a>. The dashboard you build is the dashboard you optimize. The dashboard you optimize is the company you become.
         </div>
       </footer>
 

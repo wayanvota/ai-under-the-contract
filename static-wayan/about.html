@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About AI Under The Contract</title>
+    <meta name="description" content="Why the AI Under The Contract simulator matters and how to read it." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html">AI Under The Contract</a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="primary" href="https://payer-contract-sim.onrender.com/">Use the simulator</a>
+        </nav>
+      </header>
+
+      <main class="content about-layout">
+        <nav class="side-menu" aria-label="About sections">
+          <a href="#why">Why this matters</a>
+          <a href="#what">What the tool does</a>
+          <a href="#how">How to read it</a>
+          <a href="#limits">What it is not</a>
+          <a href="#author">About Wayan</a>
+        </nav>
+
+        <article class="copy-block">
+          <section id="why">
+            <div class="eyebrow">Why this matters</div>
+            <h1>AI does not escape incentives. It scales them.</h1>
+            <p class="lead">Digital health leaders often talk about AI as if the model is the main story. The harder question is what the company pays the model to notice. A documentation copilot inside a fee-for-service practice will not learn the same operating rhythm as one inside a shared-savings ACO.</p>
+            <p>This simulator turns that argument into a working object. You can move the contract mix and watch the AI’s recommended prompts, practice behavior, revenue consequences, audit exposure, and patient consequences change. The same panel can become four different companies because the payment logic changes what the organization rewards.</p>
+          </section>
+
+          <section id="what">
+            <h2>What the tool does</h2>
+            <p>The simulator starts with a realistic panel and lets you adjust payer mix, panel size, and diagnosis distribution. It compares four contract types: fee-for-service, Medicare Shared Savings Program, Medicare Advantage risk adjustment, and employer self-insured or direct contracts.</p>
+            <p>For each contract type, it shows four linked outputs: what the AI surfaces, what that drives operationally, what shows up as revenue or risk, and what changes for the patient. It also projects revenue, audit risk, and patient outcomes over three years.</p>
+            <p>The tool includes source notes because the argument is not only visual. Each quantitative claim is either tied to an intended primary source or marked as a modeled estimate that should be verified before publication.</p>
+          </section>
+
+          <section id="how">
+            <h2>How to read it</h2>
+            <p>Start with the four-column comparison. The colors are not decoration. Green marks outcomes-aligned behavior, amber marks engagement optimization, orange marks revenue extraction through billable documentation, and red marks elevated audit-risk pressure.</p>
+            <p>Then read the three-year projection. Year 1 can make the behaviors look closer than they are. By Year 3, the contract has had time to compound. The visual claim is that AI does not merely automate work. It can harden the business model into daily clinical routines.</p>
+            <p>The save and PDF features are there for executive use. A CEO can build a scenario, share the URL with the team, or bring the PDF to a board discussion. No login, email capture, newsletter signup, or tracking pixel is required.</p>
+          </section>
+
+          <section id="limits">
+            <h2>What it is not</h2>
+            <p>This is not a reimbursement calculator. It is a simulator built to make an editorial argument concrete. The dollar values and risk scores are modeled. They should be treated as directional until each supporting claim is verified against the source list.</p>
+            <p>It also does not claim that one contract type is always good or bad. A shared-savings contract can fail patients if care management is thin. An employer contract can produce real outcomes if the buyer pays for them. Medicare Advantage coding can be legitimate when the medical record supports it. The question is what the AI is rewarded for finding first.</p>
+          </section>
+
+          <section class="about-author" id="author">
+            <div class="eyebrow">Author</div>
+            <h2>Built by Wayan Vota</h2>
+            <p>This tool was built by Wayan Vota as a public argument for digital health leaders. He created it with OpenAI Codex to show how a policy and business-model critique can become working software, not only a post or slide.</p>
+            <p>The design choice is the same as his other public tools: expose the logic, label the assumptions, and make the reader test the claim directly. The simulator does not ask for a lead, an email address, or a demo request. The tool is the argument.</p>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          Built by Wayan Vota at <a href="https://wayan.com/">wayan.com</a>. Return to the <a href="index.html">home page</a> or use the <a href="https://payer-contract-sim.onrender.com/">live simulator</a>.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
