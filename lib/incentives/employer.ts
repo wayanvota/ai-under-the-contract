@@ -33,7 +33,7 @@ export function buildEmployer(input: ScenarioInput): { comparison: ComparisonBlo
       drives:
         "Touchpoint frequency, engagement reporting, and defensible utilization. Clinical improvement depends on what the employer contract pays for.",
       revenueRisk:
-        `${dollars(annualContract)} annualized at $15 PEPM for ${lives.toLocaleString()} covered lives. Renewal risk rises if the CFO sees engagement without cost reduction.`,
+        `${dollars(annualContract)} modeled annual revenue at $15 modeled PEPM for ${lives.toLocaleString()} covered lives. Renewal risk rises if the CFO sees engagement without cost reduction.`,
       patientConsequence:
         "More messages, nudges, and coaching touches. Outcome gains are weaker unless the contract pays for measurable control or utilization change.",
       year3Revenue: year3,

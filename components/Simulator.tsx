@@ -169,10 +169,10 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
                 </a>
               </nav>
               <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-normal text-ink sm:text-4xl">
-                Your AI documentation copilot is not neutral.
+                Your AI documentation copilot optimizes what your contracts pay for.
               </h1>
               <p className="mt-3 max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">
-                It optimizes what your contracts pay for. Move the inputs to see what that means for your panel.
+                Move the inputs to see what that means for your panel.
               </p>
             </div>
             <div className="grid gap-3 text-sm text-slate-700 sm:grid-cols-3">
@@ -249,7 +249,7 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
                   onClick={() => setBenchmarkOpen((current) => !current)}
                 >
                   <ExternalLink className="h-4 w-4" />
-                  Industry benchmark
+                  Industry archetype
                 </button>
               </div>
 
@@ -312,9 +312,9 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
         <section className="mx-auto max-w-7xl px-4 pb-6 lg:px-6">
           <div className="rounded-lg border border-line bg-white p-4">
             <div className="mb-3 flex items-center justify-between gap-3">
-              <h2 className="text-base font-semibold text-ink">Industry benchmark overlay</h2>
-              <button className="text-sm font-semibold text-slate-600 underline" onClick={() => showSources(["chronicPrevalence"])}>
-                Benchmark sources
+              <h2 className="text-base font-semibold text-ink">Industry archetype overlay</h2>
+              <button className="text-sm font-semibold text-slate-600 underline" onClick={() => showSources(["chronicPrevalence", "benchmarkArchetypes"])}>
+                Archetype notes
               </button>
             </div>
             <div className="grid gap-3 md:grid-cols-3">
@@ -434,9 +434,14 @@ function NumberField({ label, value, onChange }: { label: string; value: number;
 }
 
 function ComparisonSection({ title, children }: { title: string; children: React.ReactNode }) {
+  const modeled = title === "Revenue and risk";
+
   return (
     <div className="border-b border-line p-4">
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-normal text-slate-500">{title}</h3>
+      <h3 className="mb-2 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-normal text-slate-500">
+        <span>{title}</span>
+        {modeled && <span className="rounded border border-slate-300 bg-slate-100 px-1.5 py-0.5 text-[10px] normal-case text-slate-700">modeled estimate</span>}
+      </h3>
       <div className="text-sm leading-6 text-slate-700">{children}</div>
     </div>
   );
@@ -446,7 +451,7 @@ function ModelDisclosure({ onOpenSources }: { onOpenSources: () => void }) {
   return (
     <div className="mb-4 rounded-lg border border-line bg-white p-4 text-sm leading-6 text-slate-700 shadow-sm">
       <span className="font-semibold text-ink">Modeled estimates: </span>
-      Dollar figures and audit-risk scores are scaled to your inputs. They are not verified CMS values unless the source note says so.{" "}
+      Dollar figures, audit-risk scores, patient outcome scores, and archetype mixes are scaled or modeled. They are not verified CMS values unless the source note says so.{" "}
       <button className="font-semibold text-ink underline" onClick={onOpenSources}>
         See source notes and methodology.
       </button>
@@ -520,7 +525,7 @@ function SourcesModal({ sources, onClose }: { sources: ClaimRef[]; onClose: () =
             <div key={source.id} className="p-4">
               <h3 className="text-sm font-semibold text-ink">{source.label}</h3>
               <p className="mt-2 text-sm text-slate-700">
-                <span className="font-semibold">Intended primary source: </span>
+                <span className="font-semibold">Source or model basis: </span>
                 {source.intendedSource}
               </p>
               <p className="mt-1 break-all text-sm text-slate-700">

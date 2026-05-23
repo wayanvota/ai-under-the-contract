@@ -137,7 +137,7 @@ export function ScenarioPdf({ scenario, shareUrl }: { scenario: ScenarioInput; s
             return (
               <View style={styles.box} key={key}>
                 <Text style={styles.cardTitle}>{contractLabels[key]}</Text>
-                <Text style={styles.paragraph}>Revenue: {dollars(block.year3Revenue)}</Text>
+                <Text style={styles.paragraph}>Revenue modeled estimate: {dollars(block.year3Revenue)}</Text>
                 <Text style={styles.paragraph}>Audit risk: {Math.round(block.year3AuditRisk)}/100</Text>
                 <Text style={styles.paragraph}>Patient outcomes index: {Math.round(block.year3OutcomesIndex)}/100</Text>
               </View>

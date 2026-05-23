@@ -126,7 +126,7 @@ Core flows to check:
 Move contract sliders
 Edit diagnosis distribution
 Open source notes
-Toggle industry benchmark
+Toggle industry archetype
 Save scenario
 Open /s/{slug}
 Export PDF
