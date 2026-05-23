@@ -3,14 +3,14 @@
 Upload the contents of this folder to:
 
 ```text
-wayan.com/ai-under-the-contract/
+wayan.com/ai-healthcare-contract/
 ```
 
 Expected URLs:
 
 ```text
-https://wayan.com/ai-under-the-contract/
-https://wayan.com/ai-under-the-contract/about.html
+https://wayan.com/ai-healthcare-contract/
+https://wayan.com/ai-healthcare-contract/about.html
 https://payer-contract-sim.onrender.com/
 ```
 

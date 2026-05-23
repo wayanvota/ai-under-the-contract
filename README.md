@@ -19,7 +19,7 @@ https://payer-contract-sim.onrender.com
 Recommended public link:
 
 ```text
-https://wayan.com/ai-under-the-contract
+https://wayan.com/ai-healthcare-contract
 ```
 
 That page can point to the Render app, or the `wayan.com` subdomain can point at Render through DNS.
