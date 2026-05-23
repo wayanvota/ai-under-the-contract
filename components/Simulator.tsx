@@ -347,7 +347,7 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
               </p>
             </div>
             <button className="text-sm font-semibold text-ink underline" onClick={() => setActiveSources(allClaimRefs)}>
-              Open source notes and methodology
+              Open source links and methodology
             </button>
           </div>
           <div className="chart-scroll grid gap-4 overflow-x-auto lg:grid-cols-3">
@@ -453,7 +453,7 @@ function ModelDisclosure({ onOpenSources }: { onOpenSources: () => void }) {
       <span className="font-semibold text-ink">Modeled estimates: </span>
       Dollar figures, audit-risk scores, patient outcome scores, and archetype mixes are scaled or modeled. They are not verified CMS values unless the source note says so.{" "}
       <button className="font-semibold text-ink underline" onClick={onOpenSources}>
-        See source notes and methodology.
+        See source links and methodology.
       </button>
     </div>
   );
@@ -530,7 +530,9 @@ function SourcesModal({ sources, onClose }: { sources: ClaimRef[]; onClose: () =
               </p>
               <p className="mt-1 break-all text-sm text-slate-700">
                 <span className="font-semibold">URL: </span>
-                {source.url}
+                <a className="underline" href={source.url} target="_blank" rel="noreferrer">
+                  {source.url}
+                </a>
               </p>
               <p className="mt-1 text-sm text-slate-700">
                 <span className="font-semibold">Retrieval date: </span>
