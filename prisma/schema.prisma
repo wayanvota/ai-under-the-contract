@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Scenario {
+  slug                    String   @id
+  contract_mix            Json
+  panel_size              Int
+  diagnosis_distribution  Json
+  created_at              DateTime @default(now()) @db.Timestamptz(6)
+  view_count              Int      @default(0)
+
+  @@map("scenarios")
+}

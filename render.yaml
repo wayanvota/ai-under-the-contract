@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: payer-contract-sim
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run deploy:render
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
