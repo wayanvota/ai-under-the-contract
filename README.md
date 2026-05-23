@@ -63,8 +63,6 @@ No analytics key, email tool, tracking pixel, or login provider is used.
 ```text
 Build command: npm install && npm run deploy:render
 Start command: npm run start
-
-The `start` script runs `node .next/standalone/server.js`, which matches Next standalone output on Render.
 ```
 
 One-command path after Render is connected to GitHub:
