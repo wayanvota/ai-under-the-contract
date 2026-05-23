@@ -19,7 +19,7 @@ https://payer-contract-sim.onrender.com
 Recommended public link:
 
 ```text
-https://wayan.com/ai-healthcare-contract
+https://wayan.com/ai-under-the-contract
 ```
 
 That page can point to the Render app, or the `wayan.com` subdomain can point at Render through DNS.
@@ -99,6 +99,10 @@ Each file includes the model comment for that contract and the prompt, behavior,
 ## Verification list before publication
 
 Every numeric claim displayed in the tool is listed in `VERIFICATION.md`. Before the LinkedIn article goes live, fill in the verified URL and retrieval date for each claim. If a claim cannot be verified, lower the precision in the UI or mark it as an estimate.
+
+## License
+
+The software is released under the MIT License. See `LICENSE`.
 
 ## Local build checks
 
