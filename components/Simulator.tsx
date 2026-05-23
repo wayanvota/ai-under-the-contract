@@ -271,6 +271,7 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-5 lg:px-6">
+        <ModelDisclosure onOpenSources={() => setActiveSources(allClaimRefs)} />
         <div className="grid gap-4 lg:grid-cols-4">
           {contractOrder.map((key) => {
             const block = result.comparisons[key];
@@ -341,10 +342,12 @@ export default function Simulator({ initialScenario, sharedSlug }: SimulatorProp
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
             <div>
               <h2 className="text-xl font-semibold text-ink">Three-year projection</h2>
-              <p className="mt-1 text-sm text-slate-600">The Year 1 choice compounds into a different operating model by Year 3.</p>
+              <p className="mt-1 text-sm text-slate-600">
+                The Year 1 choice compounds into a different operating model by Year 3. Dollar figures and audit-risk scores are modeled estimates.
+              </p>
             </div>
             <button className="text-sm font-semibold text-ink underline" onClick={() => setActiveSources(allClaimRefs)}>
-              Open all source notes
+              Open source notes and methodology
             </button>
           </div>
           <div className="chart-scroll grid gap-4 overflow-x-auto lg:grid-cols-3">
@@ -435,6 +438,18 @@ function ComparisonSection({ title, children }: { title: string; children: React
     <div className="border-b border-line p-4">
       <h3 className="mb-2 text-xs font-semibold uppercase tracking-normal text-slate-500">{title}</h3>
       <div className="text-sm leading-6 text-slate-700">{children}</div>
+    </div>
+  );
+}
+
+function ModelDisclosure({ onOpenSources }: { onOpenSources: () => void }) {
+  return (
+    <div className="mb-4 rounded-lg border border-line bg-white p-4 text-sm leading-6 text-slate-700 shadow-sm">
+      <span className="font-semibold text-ink">Modeled estimates: </span>
+      Dollar figures and audit-risk scores are scaled to your inputs. They are not verified CMS values unless the source note says so.{" "}
+      <button className="font-semibold text-ink underline" onClick={onOpenSources}>
+        See source notes and methodology.
+      </button>
     </div>
   );
 }

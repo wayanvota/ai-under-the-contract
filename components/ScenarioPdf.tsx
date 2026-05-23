@@ -59,6 +59,15 @@ const styles = StyleSheet.create({
     lineHeight: 1.35,
     marginBottom: 3
   },
+  disclosure: {
+    border: "1 solid #d8dee8",
+    borderRadius: 4,
+    padding: 6,
+    marginTop: 8,
+    fontSize: 7,
+    color: "#475569",
+    lineHeight: 1.3
+  },
   footer: {
     borderTop: "1 solid #d8dee8",
     marginTop: 10,
@@ -119,6 +128,9 @@ export function ScenarioPdf({ scenario, shareUrl }: { scenario: ScenarioInput; s
         </View>
 
         <Text style={styles.sectionTitle}>Year 3 summary</Text>
+        <Text style={styles.disclosure}>
+          Modeled estimates: dollar figures and audit-risk scores are scaled to the scenario inputs. They are not verified CMS values unless source notes say so.
+        </Text>
         <View style={styles.row}>
           {contractOrder.map((key) => {
             const block = result.comparisons[key];
