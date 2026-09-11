@@ -3,17 +3,18 @@ import Simulator from "@/components/Simulator";
 import { getScenario } from "@/lib/scenarioStore";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function SharedScenarioPage({ params }: PageProps) {
-  const scenario = await getScenario(params.slug);
+  const { slug } = await params;
+  const scenario = await getScenario(slug);
 
   if (!scenario) {
     notFound();
   }
 
-  return <Simulator initialScenario={scenario} sharedSlug={params.slug} />;
+  return <Simulator initialScenario={scenario} sharedSlug={slug} />;
 }
