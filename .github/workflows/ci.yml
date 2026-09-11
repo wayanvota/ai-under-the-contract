@@ -23,3 +23,15 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - name: Retain E2E failure evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-under-the-contract-e2e-evidence
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14
