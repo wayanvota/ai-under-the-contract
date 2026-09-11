@@ -19,13 +19,13 @@
     "lucide-react": "^0.468.0",
     "next": "^14.2.18",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.2.8",
     "recharts": "^2.13.3"
   },
   "devDependencies": {
     "@types/node": "^20.17.10",
     "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react-dom": "^19.2.7",
     "autoprefixer": "^10.5.5",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.18",
