@@ -4,7 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { makeSlug } from "@/lib/slug";
 import type { ScenarioInput, StoredScenario } from "@/lib/types";
 
-const localStorePath = path.join(process.cwd(), ".data", "scenarios.json");
+const localStoreFile = process.env.LOCAL_SCENARIO_STORE_FILE || "scenarios.json";
+const localStorePath = path.join(process.cwd(), ".data", path.basename(localStoreFile));
 
 type LocalStore = Record<string, StoredScenario>;
 

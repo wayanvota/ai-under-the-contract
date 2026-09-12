@@ -131,3 +131,24 @@ Save scenario
 Open /s/{slug}
 Export PDF
 ```
+
+## Automated end-to-end tests
+
+The Playwright suite starts the production Next.js server against an isolated
+local scenario store and drives the shipped Chromium UI. It covers the primary
+simulation, save, deep-link, source, and PDF boundaries along with failures,
+validation, repeated actions, mobile and keyboard use, stored markup, path
+manipulation, oversized bodies, and error leakage. It does not use Neon or any
+production data.
+
+```bash
+npm ci
+npx playwright install chromium
+npm run build
+npm run test:e2e
+```
+
+Use `npm run test:e2e -- --grep U05` for one category or
+`npm run test:e2e:ui` while debugging. Failed CI runs retain the HTML report,
+screenshots, traces, and video. Add new user workflows and trust boundaries to
+`tests/e2e/simulator.spec.ts`.
