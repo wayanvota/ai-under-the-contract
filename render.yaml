@@ -3,7 +3,7 @@ services:
     name: payer-contract-sim
     runtime: node
     plan: free
-    buildCommand: npm install && npm run deploy:render
+    buildCommand: npm ci && npm run deploy:render
     startCommand: npm run start
     envVars:
       - key: DATABASE_URL
